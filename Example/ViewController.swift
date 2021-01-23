@@ -281,11 +281,11 @@ class ViewController: UIViewController {
             alert.show()
             
         case .dataPicker:
-            let alert = UIAlertController(style: self.alertStyle, title: "Date Picker", message: "Select Date")
+            let alert = UIAlertController(style: self.alertStyle, title: "日期选择器", message: "选择日期")
             alert.addDatePicker(mode: .dateAndTime, date: Date(), minimumDate: nil, maximumDate: nil) { date in
                 Log(date)
             }
-            alert.addAction(title: "Done", style: .cancel)
+            alert.addAction(title: "完成", style: .cancel)
             alert.show()
             
         case .pickerView:
@@ -303,25 +303,25 @@ class ViewController: UIViewController {
                     }
                 }
             }
-            alert.addAction(title: "Done", style: .cancel)
+            alert.addAction(title: "完成", style: .cancel)
             alert.show()
             
         case .countryPicker:
             let alert = UIAlertController(style: self.alertStyle)
             alert.addLocalePicker(type: .country) { info in Log(info) }
-            alert.addAction(title: "Cancel", style: .cancel)
+            alert.addAction(title: "取消", style: .cancel)
             alert.show()
             
         case .phoneCodePicker:
             let alert = UIAlertController(style: self.alertStyle)
             alert.addLocalePicker(type: .phoneCode) { info in Log(info) }
-            alert.addAction(title: "Cancel", style: .cancel)
+            alert.addAction(title: "取消", style: .cancel)
             alert.show()
             
         case .currencyPicker:
             let alert = UIAlertController(style: self.alertStyle)
             alert.addLocalePicker(type: .currency) { info in Log(info) }
-            alert.addAction(title: "Cancel", style: .cancel)
+            alert.addAction(title: "取消", style: .cancel)
             alert.show()
             
         case .imagePicker:
@@ -335,21 +335,21 @@ class ViewController: UIViewController {
                 selection: .single(action: { image in
                     Log(image)
                 }))
-            alert.addAction(title: "OK", style: .cancel)
+            alert.addAction(title: "确定", style: .cancel)
             alert.show()
             
         case .photoLibraryPicker:
             let alert = UIAlertController(style: self.alertStyle)
             alert.addPhotoLibraryPicker(flow: .vertical, paging: false,
                 selection: .multiple(action: { assets in Log(assets) }))
-            alert.addAction(title: "Cancel", style: .cancel)
+            alert.addAction(title: "取消", style: .cancel)
             alert.show()
             
             
         case .colorPicker:
             let alert = UIAlertController(style: self.alertStyle)
             alert.addColorPicker(color: UIColor(hex: 0xFF2DC6)) { color in Log(color) }
-            alert.addAction(title: "Cancel", style: .cancel)
+            alert.addAction(title: "取消", style: .cancel)
             alert.show()
             
         case .textViewer:
@@ -372,19 +372,19 @@ class ViewController: UIViewController {
                 .list("Apple Print Products"),
                 .normal("*You can return software, provided that it has not been installed on any computer. Software that contains a printed software license may not be returned if the seal or sticker on the software media packaging is broken.")]
             alert.addTextViewer(text: .attributedText(text))
-            alert.addAction(title: "OK", style: .cancel)
+            alert.addAction(title: "确定", style: .cancel)
             alert.show()
             
         case .contactsPicker:
             let alert = UIAlertController(style: self.alertStyle)
             alert.addContactsPicker { contact in Log(contact) }
-            alert.addAction(title: "Cancel", style: .cancel)
+            alert.addAction(title: "取消", style: .cancel)
             alert.show()
             
         case .locationPicker:
             let alert = UIAlertController(style: self.alertStyle)
             alert.addLocationPicker { location in Log(location) }
-            alert.addAction(title: "Cancel", style: .cancel)
+            alert.addAction(title: "取消", style: .cancel)
             alert.show()
             
         case .telegramPicker:
@@ -399,7 +399,7 @@ class ViewController: UIViewController {
                     Log(location)
                 }
             }
-            alert.addAction(title: "Cancel", style: .cancel)
+            alert.addAction(title: "取消", style: .cancel)
             alert.show()
         }
     }

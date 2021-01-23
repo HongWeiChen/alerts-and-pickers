@@ -44,9 +44,9 @@ public final class LocationPickerViewController: UIViewController {
 	/// default: false
 	public var useCurrentLocationAsHint = false
 	
-	public var searchBarPlaceholder = "Search or enter an address"
-	public var searchHistoryLabel = "Search History"
-    public var selectButtonTitle = "Select"
+	public var searchBarPlaceholder = "搜索地址"
+	public var searchHistoryLabel = "历史选择"
+    public var selectButtonTitle = "选择"
 	
 	public var mapType: MKMapType = .standard {
 		didSet {
